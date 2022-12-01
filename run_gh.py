@@ -35,7 +35,7 @@ async def stuff(owner: str, repo: str, token: str) -> None:
             "run_number"
         ]  # 6.0 https://s3.amazonaws.com/opentrons-app/builds/Opentrons-v6.0.0-linux-b20264.AppImage  + 10000
         console.print(f"run number is {run_number}")
-        link = f"https://s3.amazonaws.com/opentrons-app/builds/Opentrons-v6.0.0-win-b{int(run_number)+10000}-edge.exe"
+        link = f"https://s3.amazonaws.com/opentrons-app/builds/Opentrons-v6.1.0-win-b{int(run_number)+10000}-edge.exe"
         console.print(f"the link = {link}")
 
 
