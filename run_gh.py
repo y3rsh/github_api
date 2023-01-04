@@ -35,8 +35,14 @@ async def stuff(owner: str, repo: str, token: str) -> None:
             "run_number"
         ]  # 6.0 https://s3.amazonaws.com/opentrons-app/builds/Opentrons-v6.0.0-linux-b20264.AppImage  + 10000
         console.print(f"run number is {run_number}")
-        link = f"https://s3.amazonaws.com/opentrons-app/builds/Opentrons-v6.1.0-win-b{int(run_number)+10000}-edge.exe"
-        console.print(f"the link = {link}")
+        app_version_on_edge = "v6.2.0"
+        link = f"https://s3.amazonaws.com/opentrons-app/builds/Opentrons-{app_version_on_edge}-win-b{int(run_number)+10000}-edge.exe"
+        console.print(f".exe link = {link}")
+        # https://s3.amazonaws.com/opentrons-app/builds/Opentrons-v6.2.0-mac-b25010-edge.dmg
+        link = f"https://s3.amazonaws.com/opentrons-app/builds/Opentrons-{app_version_on_edge}-mac-b{int(run_number)+10000}-edge.dmg"
+        console.print(f".dmg link = {link}")
+        link = f"https://s3.amazonaws.com/opentrons-app/builds/Opentrons-{app_version_on_edge}-linux-b{int(run_number)+10000}-edge.AppImage"
+        console.print(f".AppImage link = {link}")
 
 
 if __name__ == "__main__":
